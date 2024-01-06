@@ -1,0 +1,42 @@
+@host = https://localhost:3000/auth
+@accessToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRlc3QuY29tIiwic3ViIjo0LCJ0eXBlIjoiYWNjZXNzIiwiaWF0IjoxNzA0NTIxNDI0LCJleHAiOjE3MDQ1MjE3MjR9.FjhhqaIuw9gGs4TnsyQ4MDMRZGWYh_bN5hoRCATNgWA
+@refreshToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRlc3QuY29tIiwic3ViIjo0LCJ0eXBlIjoicmVmcmVzaCIsImlhdCI6MTcwNDUyMTU2MywiZXhwIjoxNzA1MTI2MzYzfQ.a2rlPHkIjNU-CnEYXPjjMnNwBLMKtZAv9XpxKLV-KJw
+
+### 회원가입
+
+POST {{host}}/signup
+Content-Type: application/json
+
+{
+    "email": "test2@test.com",
+    "name": "홍길동",
+    "password": "Test1234!",
+    "passwordCheck": "Test1234!",
+    "phone":"+821012345670"
+}
+
+### 로그인
+POST {{host}}/login
+Content-Type: application/json
+
+{
+    "email": "test1@test.com",
+    "password": "Test1234!"
+}
+
+### Access Token 가드 검증
+GET {{host}}/token/access
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+### Refresh Token 가드 검증
+GET {{host}}/token/refresh
+Content-Type: application/json
+Authorization: Bearer {{refreshToken}}
+
+### Access Token 재발급
+POST {{host}}/rotate/access
+Content-Type: application/json
+Authorization: Bearer {{refreshToken}}
+
+{}
