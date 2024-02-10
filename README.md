@@ -2,6 +2,11 @@
 
 로그인과 회원가입 구현하기.
 
+## 우수상 / 코드 리뷰
+![image](https://github.com/HoyeongJeon/2024nbcamp_timeattack/assets/78394999/33446b73-13c9-44af-8d2e-54922f72195b)
+![image](https://github.com/HoyeongJeon/2024nbcamp_timeattack/assets/78394999/35ec46a7-86d6-4c11-9bbe-a165b5b6bee3)
+
+
 ## Erd
 
 ![image](https://github.com/HoyeongJeon/2024nbcamp_timeattack/assets/78394999/c0e9d14e-6b5d-498b-bfad-4d0b6768c060)
